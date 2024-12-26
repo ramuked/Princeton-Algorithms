@@ -10,10 +10,8 @@ import main.java.com.algorithms.sorting.shellsort.ShellSort;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.Comparator;
 
 class SortingTests {
-    private static final Random random = new Random();
 
     private static final int SIZE = 100_000;
 
