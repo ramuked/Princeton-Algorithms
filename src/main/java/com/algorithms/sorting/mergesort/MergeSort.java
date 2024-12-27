@@ -22,7 +22,7 @@ public class MergeSort {
         merge(a, aux, low, mid, high);
     }
 
-    private static <T extends Comparable<T>> void merge(T[] a, T[] aux, int low, int mid, int high) {
+    protected static <T extends Comparable<T>> void merge(T[] a, T[] aux, int low, int mid, int high) {
 
         assert isSorted(a, low, mid);
         assert isSorted(a, mid + 1, high);

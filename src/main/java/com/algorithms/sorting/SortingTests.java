@@ -1,5 +1,6 @@
 package main.java.com.algorithms.sorting;
 
+import main.java.com.algorithms.sorting.mergesort.BottomUpMergeSort;
 import main.java.com.algorithms.sorting.mergesort.MergeSort;
 import org.junit.jupiter.api.Test;
 
@@ -73,7 +74,19 @@ class SortingTests {
         assertArrayEquals(array, expected, "The integer array is not sorted correctly.");
     }
 
+    @Test
+    public void testBottomUpMergeSortWithIntegers() {
+        Integer[] array = generateRandomIntegers(SIZE);
+        Integer[] expected = Arrays.copyOf(array, array.length);
 
+        long startTime = System.currentTimeMillis(); // Start timing
+        BottomUpMergeSort.sort(array);
+        long endTime = System.currentTimeMillis(); // End timing
+        System.out.println("Time taken for sorting Integers w/ Merge Sort: " + (endTime - startTime) + " ms");
+
+        Arrays.sort(expected);
+        assertArrayEquals(array, expected, "The integer array is not sorted correctly.");
+    }
 
 
     private Integer[] generateRandomIntegers(int size) {
