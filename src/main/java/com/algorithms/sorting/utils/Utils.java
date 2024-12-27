@@ -18,4 +18,12 @@ public class Utils {
         }
         return true;
     }
+
+    public static <T extends Comparable<T>> boolean isSorted(T[] a, int low, int high) {
+        for (int i = low + 1; i < high; i++) {
+            if (less(a[i], a[i - 1]))
+                return false;
+        }
+        return true;
+    }
 }
