@@ -14,5 +14,6 @@ public class SelectionSort {
 
             swap(a, i, min);
         }
+        assert isSorted(a);
     }
 }

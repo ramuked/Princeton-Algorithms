@@ -1,7 +1,6 @@
 package main.java.com.algorithms.sorting.shellsort;
 
-import static main.java.com.algorithms.sorting.utils.Utils.less;
-import static main.java.com.algorithms.sorting.utils.Utils.swap;
+import static main.java.com.algorithms.sorting.utils.Utils.*;
 
 public class ShellSort {
     public static <T extends Comparable<T>> void sort(T[] a) {
@@ -15,6 +14,7 @@ public class ShellSort {
             }
             h = h / 3;
         }
+        assert isSorted(a);
     }
 }
 

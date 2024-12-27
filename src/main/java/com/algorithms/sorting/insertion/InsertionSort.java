@@ -11,5 +11,7 @@ public class InsertionSort {
                     swap(a, j, j - 1);
                 else
                     break;
+
+        assert isSorted(a);
     }
 }
