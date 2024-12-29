@@ -82,7 +82,7 @@ class SortingTests {
         long startTime = System.currentTimeMillis(); // Start timing
         BottomUpMergeSort.sort(array);
         long endTime = System.currentTimeMillis(); // End timing
-        System.out.println("Time taken for sorting Integers w/ Merge Sort: " + (endTime - startTime) + " ms");
+        System.out.println("Time taken for sorting Integers w/ Bottom Up Merge Sort: " + (endTime - startTime) + " ms");
 
         Arrays.sort(expected);
         assertArrayEquals(array, expected, "The integer array is not sorted correctly.");
